@@ -1,12 +1,14 @@
 <template>
   <v-app>
-    <default-bar />
+    <!-- <default-bar /> -->
+    <!-- <v-navigation-drawer>
+
+    </v-navigation-drawer> -->
 
     <default-view />
   </v-app>
 </template>
 
 <script setup>
-  import DefaultBar from './AppBar.vue'
-  import DefaultView from './View.vue'
+import DefaultView from "./View.vue";
 </script>

@@ -8,14 +8,29 @@ const routes = [
     children: [
       {
         path: '',
+        name: 'Login',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "home" */ '@/views/LandingView.vue'),
+      },
+    ],
+  },
+  {
+    path: '/home',
+    component: () => import('@/layouts/Navigation.vue'),
+    children: [
+      {
+        path: '',
         name: 'Home',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
+        component: () => import(/* webpackChunkName: "home" */ '@/views/HomeView.vue'),
       },
     ],
   },
+
 ]
 
 const router = createRouter({
